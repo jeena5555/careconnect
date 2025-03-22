@@ -1,0 +1,382 @@
+.home {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 100%),
+  url("../../assets/bg-home.png"); /* เปลี่ยนเป็น path ของคุณ */
+  background-size: cover; /* ปรับให้พอดีกับหน้าจอ */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  position: relative;
+  max-width: 680px;
+  margin: 150px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  opacity: 0.95;
+  border-radius: 40px;
+
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  padding: 30px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3E5279;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.highlight {
+  color: #15CDCB;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.hero-subtitle {
+  font-size: 25px;
+  color: #494949;
+  margin: 0;
+}
+
+.hero-description {
+  font-size: 14px;
+  color: #565656;
+  margin-top: 15px;
+  margin-left: 10px;
+  max-width: 80%;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  gap: 35px;
+  justify-content: flex-end;
+}
+
+.btn-outline {
+  padding: 10px 30px;
+  border: 2px solid #5DC4E3;
+  color: #000000;
+  background: transparent;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+  background: #5DC4E3;
+}
+
+/* Floating Icons */
+.floating-icon {
+  position: absolute;
+}
+
+.heart-icon {
+  top: -60px;
+  right: -50px;
+  width: 180px;
+  animation: bounce 2s infinite;
+}
+
+.bone-icon {
+  bottom: -10px;
+  left: -45px;
+  width: 150px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+
+.left-detail, .right-detail {
+  width: 45%;
+}
+
+.left-detail {
+  padding-left: 60px;
+}
+
+.right-detail {
+  padding-right: 60px;
+}
+
+.left-detail .title {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.left-detail .title h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #3E5279;
+  margin: 0;
+}
+
+.left-detail .title p {
+  font-size: 24px;
+  color: #B8B8B8;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+
+.left-detail .title p span {
+  color: #5DC4E3;
+}
+
+.left-detail .sub-title {
+  background-color: #E1F6F5;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.left-detail .detail {
+  padding-left: 200px;
+  font-size: 16px;
+  color: #494949;
+  margin: 10px;
+  margin-top: 40px;
+}
+
+
+.left-detail .sub-title p,
+.left-detail .detail p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #494949;
+}
+
+.icon {
+  max-width: 100%;
+}
+
+.doctor-icon {
+  position: absolute;
+  bottom: -400px;
+  right: 400px;
+  max-width: 800px;
+}
+
+.nurse-icon {
+  width: 210px;
+  position: absolute;
+  bottom: -390px;
+  left: 100px
+}
+
+.welcome .right-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.service {
+  margin: 0 90px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px 60px;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  width: 320px;
+  height: 350px;
+  border: 1px solid #EBEBEB;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.service-overlay {
+  width: 100%;
+  height: 170px;
+  background-color: #E1F6F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.service-img {
+  width: 30%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-group {
+  padding: 0 20px;
+}
+
+.service-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+
+  .title-service {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 16px;
+    color: #3E5279;
+  }
+}
+
+.service-department {
+  color: #3E5279;
+}
+
+.service-detail {
+  font-size: 14px;
+  color: #909090;
+  margin-top: 3px;
+}
+
+.btn-doctor {
+  color: #15CDCB;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  background: transparent;
+  border: none;
+}
+
+.btn-doctor:hover {
+  color: #5bebe9;
+}
+
+hr {
+  color: #909090;
+}
+
+.contact {
+  width: 50%;
+  margin: 80px auto;
+  box-shadow: 0px 0px 10px 0px rgba(181, 181, 181, 0.75);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3E5279;
+  margin-left: 10px;
+}
+
+.contact-detail {
+  display: flex;
+  color: #909090;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-left,
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.address {
+  line-height: 25px;
+}
+
+.hospital-location-icon {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hospital-location-icon {
+    max-width: 80%;
+    position: relative;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .hospital-location-icon {
+    max-width: 90%;
+  }
+}
+
+

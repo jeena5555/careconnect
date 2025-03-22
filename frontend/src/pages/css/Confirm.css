@@ -1,0 +1,57 @@
+.container-confirm {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+}
+
+.details {
+  background: white;
+  padding: 5rem;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  height: 80vh;
+}
+
+.confirm-title {
+  text-align: center;
+  color: #3E5279;
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.confirm-information {
+  margin-top: 40px;
+  padding-left: 280px;
+}
+
+.button-group-signin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn-signin {
+  padding: 15px 35px;
+  border: 1px solid #5DC4E3;
+  color: #000000;
+  background: transparent;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn-signin {
+  padding: 15px 35px;
+  border: 1px solid #5DC4E3;
+  color: #fff;
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}

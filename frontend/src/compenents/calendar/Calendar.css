@@ -1,0 +1,107 @@
+/* Calendar container */
+.calendar-container {
+  padding: 16px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* Header section */
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-month-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3E5279;
+}
+
+.calendar-nav-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar-nav-button {
+  padding: 8px;
+  border: 0;
+  color:#4b5563;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+/* Days header */
+.calendar-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  padding: 8px;
+}
+
+/* Calendar grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px 8px;
+  justify-items: center;  /* Horizontally center items */
+  align-items: center;    /* Vertically center items */
+}
+
+/* Past date styling */
+.calendar-day-button:disabled {
+  color: #ccc;  /* Grey text */
+  background-color: transparent; /* Transparent background */
+  cursor: not-allowed;
+  opacity: 0.6;  /* Make it appear faded */
+}
+
+/* Past date without hover */
+.calendar-past {
+  color: #ccc;
+  background-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+
+/* Day button */
+.calendar-day-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;  /* Adjust size for better visibility */
+  height: 30px; /* Adjust size for better visibility */
+  padding: 5px;
+  font-size: 14px;
+  color: #1f2937;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+  outline: none;
+  text-align: center;  /* Ensures the number inside the button is centered */
+}
+
+/* Selected day styling */
+.calendar-day-button.calendar-selected {
+  background-color: #e3fefb;
+  border: 1px solid #14b8a6; /* Border with color */
+  color: black;
+}
+
+.calendar-day-button.calendar-selected:hover {
+  background-color: #14b8a6;
+}

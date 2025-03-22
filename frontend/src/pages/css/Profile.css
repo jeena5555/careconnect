@@ -1,0 +1,100 @@
+/* Profile.css */
+
+.profile-edit-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.edit-profile-title {
+  color: #3E5279;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.info-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 60px;
+  text-align: left;
+}
+
+.info-edit-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.info-edit-input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+}
+
+textarea.info-edit-input {
+  resize: none;
+  height: 60px;
+}
+
+.address-edit {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.button-edit-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.cancel-edit-button {
+  background: white;
+  border: 2px solid #4facfe;
+  color: #4facfe;
+  width: 150px;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-edit-button {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  width: 150px;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-edit-grid {
+    grid-template-columns: 1fr;
+  }
+}

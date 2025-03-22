@@ -1,0 +1,88 @@
+.treatment-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.treatment-profile-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-right .profile-title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.treatment-profile-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.treatment-appointment-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+
+  .treatment-section-title {
+    font-size: 20px;
+  }
+
+  .treatment-info-item {
+    margin: 10px;
+  }
+}
+
+.treatment-profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+}
+
+.treatment-profile-name {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.treatment-profile-button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #5DC4E3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.treatment-profile-button:hover {
+  background-color: #E1F6F5;
+  color: #B8B8B8;
+}
+
+/* Additional styles for profile info sections */
+.treatment-info-section {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.treatment-info-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}

@@ -1,0 +1,129 @@
+/* Container for the login page */
+.container-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+}
+
+/* Image positioning */
+.login-img {
+  width: 40%;
+  max-width: 400px;
+}
+
+/* Login box style */
+.login-box {
+  background: white;
+  padding: 4rem;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Title of the login box */
+.login-title {
+  color: #3E5279;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+/* Input group styling */
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Styling for the login input fields */
+.login-input {
+  background-color: #EFEFEF;
+  color: #6a6a6a;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #EFEFEF;
+  border-radius: 50px;
+  text-align: center;
+}
+
+/* Icon position inside input field */
+.user-icon, .lock-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+/* Login button styling */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Register link styling */
+.register-link {
+  margin-top: 10px;
+  font-size: 14px;
+  color: gray;
+}
+
+.register-link a {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* Error message */
+.error-message {
+  color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-login {
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .login-img {
+    width: 60%;
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .login-box {
+    padding: 3rem;
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 2rem;
+    max-width: 280px;
+  }
+
+  .login-title {
+    font-size: 30px;
+  }
+
+  .login-input {
+    padding: 12px;
+  }
+
+  .login-btn {
+    padding: 12px;
+  }
+}

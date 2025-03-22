@@ -1,0 +1,16 @@
+.btn-primary {
+  padding: 10px 20px;
+  background: linear-gradient(to right,#6482e6, #91dde5);;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  max-height: 46px;
+}
+
+.btn-primary:hover {
+  color: #000000;
+  background: linear-gradient(#aabeff, #bcf8ff);
+}

@@ -1,0 +1,190 @@
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.filter-section label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filter-section input[type="date"] {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.patient-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns */
+  grid-auto-rows: auto;
+  gap: 80px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.patient-card {
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 15px;
+}
+
+.patient-profile {
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.search-patient-input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-patient-input-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-patient-input-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.book-appointment {
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  color: #7b7b7b;
+  margin-top: 20px;
+  width: 100%;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.done-appointment {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-btn-appointment {
+  padding: 15px 35px;
+  border: 1px solid #5DC4E3;
+  color: #000000;
+  background: transparent;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn-appointment {
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background: #ccc;
+  color: #7b7b7b;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .patient-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .patient-card {
+    padding: 10px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .book-appointment {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .edit-btn-appointment {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+
+  .close-btn-appointment {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .patient-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .patient-card {
+    padding: 8px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .book-appointment {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .edit-btn-appointment {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+  }
+
+  .close-btn-appointment {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

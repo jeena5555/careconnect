@@ -1,0 +1,48 @@
+.time-slot {
+  width: 100%;
+  padding: 16px 24px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-slot:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.time-slot:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.time-slot.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.time-slot.selected {
+  border-color: #14b8a6;
+  background-color: #e3fefb;
+}
+
+.time-slot-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time {
+  color: #4b5563;
+}
+
+.arrow {
+  color: #9ca3af;
+}

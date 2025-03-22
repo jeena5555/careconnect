@@ -1,0 +1,166 @@
+.treatment-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.treatment-section-wrapper, .prescription-section-wrapper {
+  width: 45%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.treatment-section-wrapper-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.treatment-add-button, .prescription-add-button {
+  background-color: #f0faff;
+  border: 1px solid #2d89ff;
+  border-radius: 20px;
+  height: 35px;
+  padding: 0 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.prescription-detail {
+  display: flex;
+  gap: 0 10px;
+
+  .prescription-detail-textarea {
+    width: 75%;
+    border-radius: 30px;
+    border: 1px solid #e5e7eb;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+}
+
+
+.treatment-additional {
+  margin-top: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.treatment-item{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.treatment-tag {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin: 0 10px;
+  color: white;
+}
+
+.treatment-tag {
+  background-color: #5DC4E3;
+}
+
+.prescription-list {
+  margin-top: 10px;
+  background-color: #E1F6F5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.prescription-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.medicine-name {
+  color: #6c6c6c;
+}
+
+.prescription-quantity {
+  color: #15CDCB;
+}
+
+.modal-submit-treatment, .modal-submit-prescription {
+  margin-top: 10px;
+  padding: 10px 25px;
+  font-size: 15px;
+  background: #5DC4E3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.modal-submit-confirm {
+  margin-top: 10px;
+  padding: 10px 25px;
+  font-size: 15px;
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.modal-cancel-treatment, .modal-cancel-prescription, .modal-cancel-confirm {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background: none;
+  color: #B8B8B8;
+  border: 1px solid #B8B8B8;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.modal-actions-treatment, .modal-actions-prescription, .modal-actions-confirm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Container for treatment type dropdown */
+.treatment-type-container, .detail-container, .diagnose-container {
+  margin-bottom: 1rem;
+}
+
+.treatment-type-select, .detail-input, .diagnose-input{
+  background-color: #EFEFEF;
+  color: #6c6c6c;
+  width: 60%;
+  margin: 0 5px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.save-btn-div {
+  margin-top: 10px;
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.save-treatment {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  background: linear-gradient(to right, #3b82f6, #14b8a6);
+  color: white;
+}

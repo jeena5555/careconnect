@@ -1,0 +1,76 @@
+.receipt-list-custom {
+  display: grid;
+  grid-auto-rows: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 60%;
+  margin: auto;
+}
+
+.receipt-card-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.receipt-card-custom:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.receipt-icon-custom {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.receipt-details-custom {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.receipt-details-custom h3 {
+  margin: 5px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.receipt-details-title {
+  display:flex;
+  gap: 20px;
+}
+
+.prescription-status {
+  font-size: 15px;
+  color: #fff;
+  padding: 5px 30px;
+  border-radius: 50px;
+}
+
+.status-given {
+  background-color: #6ED655;
+}
+
+.status-not-given {
+  background-color: #E8374F;
+}
+
+
+
+.receipt-details-custom p {
+  margin: 3px 0;
+}
+
+.patient-id-custom {
+  color: #15CDCB;
+}
+
+.receipt-actions-custom {
+  margin-right: 20px;
+}
