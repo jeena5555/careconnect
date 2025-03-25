@@ -1,0 +1,201 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Prefix {
+  MR
+  MRS
+  MISS
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+enum BloodGroup {
+  A
+  B
+  AB
+  O
+}
+
+enum ROLE {
+  PATIENT
+  DOCTOR
+  NURSE
+}
+
+enum Status {
+  NotTreated
+  Treated
+}
+
+enum PrescriptionStatus {
+  MedicationGiven
+  MedicationNotGiven
+}
+
+model Account {
+  id            Int         @id @default(autoincrement())
+  accountName   String     @unique
+  password      String
+  role          ROLE
+  patient       Patient?
+  doctor        Doctor?
+  nurse         Nurse?
+}
+
+model Patient {
+  id                Int        @id @default(autoincrement())
+  prefix            Prefix
+  firstName         String
+  lastName          String
+  personalId        String     @unique
+  gender            Gender
+  nationality       String
+  dob               DateTime
+  height            Float
+  weight            Float
+  bloodGroup        BloodGroup
+  phone             String
+  address           String
+  allergy           String
+  registrationDate  DateTime  @default(now())
+  accountId         Int       @unique
+
+  account           Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  appointment   Appointment[]
+}
+
+model Doctor {
+  id            Int        @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  phone         String
+  email         String     @unique
+  address       String
+  description   String?
+  departmentId  Int
+  accountId     Int        @unique
+
+  account       Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  department    Department @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+
+  appointment   Appointment[]
+}
+
+model Nurse {
+  id            Int        @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  phone         String
+  email         String     @unique
+  address       String
+  accountId         Int       @unique
+
+  account           Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model Department {
+  id      Int        @id @default(autoincrement())
+  name    String
+
+  doctors Doctor[]
+}
+
+model Medicine {
+  id             Int       @id @default(autoincrement())
+  name           String
+  type           String
+  price          Int
+  stockQuantity  Int
+  expiryDate     DateTime
+  instruction    String?
+
+  prescriptionMedicines   PrescriptionMedicines[]
+}
+
+model Appointment {
+  id                     Int        @id @default(autoincrement())
+  appointmentDate        DateTime
+  appointmentStartTime   String
+  appointmentEndTime     String
+  createdAt              DateTime   @default(now())
+  patientId              Int
+  doctorId               Int
+  symptom                String
+  appointmentStatus      Status
+
+  doctor            Doctor     @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  patient           Patient    @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  prescription      Prescription?
+  invoice           Invoice?
+  treatment         Treatment[]
+}
+
+model Prescription {
+  id                  Int        @id @default(autoincrement())
+  prescriptionDetail  String
+  prescriptionDate    DateTime   @default(now())
+  appointmentId       Int        @unique
+  prescriptionStatus  PrescriptionStatus
+
+  appointment         Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+
+  prescriptionMedicines PrescriptionMedicines[]
+}
+
+model PrescriptionMedicines {
+  prescriptionId     Int
+  medicineId         Int
+  quantity           Int
+  duration           Int
+
+  prescription       Prescription @relation(fields: [prescriptionId], references: [id], onDelete: Cascade)
+  medicine           Medicine     @relation(fields: [medicineId], references: [id], onDelete: Cascade)
+
+  @@id([prescriptionId, medicineId])
+}
+
+model TreatmentType {
+  id           Int        @id @default(autoincrement())
+  name         String
+  description  String
+  cost         Int
+
+  treatments   Treatment[]
+}
+
+model Treatment {
+  id              Int        @id @default(autoincrement())
+  treatmentTypeId Int
+  details         String
+  diagnose        String
+  appointmentId   Int
+
+  appointment     Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  treatmentType   TreatmentType @relation(fields: [treatmentTypeId], references: [id], onDelete: Cascade)
+}
+
+model Invoice {
+  id             Int        @id @default(autoincrement())
+  total          Decimal    @db.Decimal(10, 2)
+  createdAt      DateTime   @default(now())
+  appointmentId  Int        @unique
+
+  appointment    Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+}
